@@ -252,9 +252,8 @@ try {
     die("DB Connection failed: " . $e->getMessage());
 }
 
-// Налаштування пагінації
-$reviewsPerPage = 7; // скільки відгуків показувати на сторінку
-$page = isset($_GET['page']) ? (int)$_GET['page'] : 1; // поточна сторінка
+$reviewsPerPage = 7; 
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($page - 1) * $reviewsPerPage;
 
 $totalReviews = $pdo->query("SELECT COUNT(*) FROM reviews")->fetchColumn();

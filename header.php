@@ -53,8 +53,8 @@
     <div class="flex items-center space-x-4">
       <?php 
         $support_text = get_field('support_text');
-        $beta_text = get_field('beta_text');
-        $beta_link = get_field('beta_link');
+        $beta_text = get_field('cta_text');
+        $beta_link = get_field('cta_link');
       ?>
       <span class="text-gray-600 hover:text-gray-900 font-medium cursor-pointer">
         <?php echo ($support_text ?: 'Support'); ?>
